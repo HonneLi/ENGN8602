@@ -1,7 +1,7 @@
 from torchvision import transforms, datasets
 import torch
 
-def get_dataloaders(input_size, batch_size, shuffle = True):
+def get_dataloaders(input_size, batch_size, shuffle=True, train_root, valid_root):
     '''
     Create the dataloaders for train, validation and test set. Randomly rotate images for data augumentation
     Normalization based on std and mean.
@@ -12,8 +12,8 @@ def get_dataloaders(input_size, batch_size, shuffle = True):
                                          transforms.ToTensor(),
                                          transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
 
-    train_dataset = datasets.ImageFolder(root='../images/train_three/', transform=data_transform)
-    val_dataset = datasets.ImageFolder(root='../images/train_three/', transform=data_transform)
+    train_dataset = datasets.ImageFolder(root=train_root, transform=data_transform)
+    val_dataset = datasets.ImageFolder(root=valid_root, transform=data_transform)
     dataLoader = {'train': torch.utils.data.DataLoader(train_dataset,
                                              batch_size=batch_size, 
                                              shuffle=True,
