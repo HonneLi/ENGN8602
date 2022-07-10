@@ -19,6 +19,12 @@ parser.add_argument("--batch_size", help="batch size of cnn",
                     type=int, default="16")
 parser.add_argument("--num_epochs", help="training epochs",
                     type=int, default="100")
+parser.add_argument("--train_root", help="training data directory",
+                    type=str, default="../images/train_three/")
+parser.add_argument("--valid_root", help="validation data directory",
+                    type=str, default="../images/train_three/")
+parser.add_argument("--num_epochs", help="training epochs",
+                    type=int, default="100")
 args = parser.parse_args()
 
 num_classes = 3
@@ -33,7 +39,7 @@ model = ResidualAttentionModel_92(num_classes = args.num_classes)
 #model = model.load_state_dict(torch.load('weights/fullset.pth'))
 
 model = model.to(device)
-dataLoader = get_dataloaders(input_size=224, batch_size=args.batch_size, shuffle=shuffle_datasets)
+dataLoader = get_dataloaders(input_size=224, batch_size=args.batch_size, shuffle=shuffle_datasets, train_root=args.train_root, valid_root=args.valid_root)
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
