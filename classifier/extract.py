@@ -7,7 +7,6 @@ import glob
 
 from ResAttention import *
 
-from dataLoader import get_dataloaders
 from train_evaluate import extract
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
