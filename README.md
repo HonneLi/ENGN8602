@@ -25,24 +25,15 @@ The model can be decoupled into two parts, the feature extraction model and the 
 </p>
 
 
-
-### Results
-Details of results are in [here](./Results.md) for further details.
-
-The residual channel attention mechaism shows its effectiveness in the classification of multi-cells images.
-
-
-<p  align="middle">
-  <img src="./vis_densenet.jpeg" width="550" />
-  <br>
-  (a) DenseNet-121 without Attention
-  <br>
-  <br>
-  <br>
-  <img src="./vis_att_densenet.jpeg" width="550" />
-  <br>
-  (b) DenseNet-121 with Attention
-</p>
+### Training
+1. Due to ethical issues, I couldn't public the extracted features as well as the dataset. Please use your own features or request to use SENDv1 through [here] (https://docs.google.com/forms/d/e/1FAIpQLSeDOEVB5p_W-MagZbIKQoB3pFCb0JW-NX7Br068M8m1ILJ3Lg/viewform). In default, you can used my extracted features in `data/i3d_feature`. The features were extracted by I3D model that pre-trained on Kinetice dataset.  
+  Run with `python train_with_features_tcn.py`（for TCN model） or `python train_with_features_ms_tcn.py` (for MS-TCN model) 
+  Then, the trained model parameters will be saved in `model_zoo/your_model_zoo`
+2. Using your own features 
+   Put your features file under `data/other_features`. And change the command based on the instructions below:
+   ![Loading Command](data/command.png "Command")
+   OR: 
+   ![Loading Command](data/command1.png "Command")
 
 ## Reference
 For the MS-TCN: https://github.com/yabufarha/ms-tcn
