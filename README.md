@@ -18,6 +18,12 @@ The model can be decoupled into two parts, the feature extraction model and the 
   Extractor model architechture
 </p>
 
+<p  align="middle">
+  <img src="./imgs/mstcn.png" />
+  <br>
+  Classification model architechture
+</p>
+
 
 
 ### Results
