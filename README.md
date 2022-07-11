@@ -26,7 +26,7 @@ The model can be decoupled into two parts, the feature extraction model and the 
 
 
 ### Training
-1. Due to ethical issues, I couldn't public the extracted features as well as the dataset. Please use your own features or request to use SENDv1 through [here] (https://docs.google.com/forms/d/e/1FAIpQLSeDOEVB5p_W-MagZbIKQoB3pFCb0JW-NX7Br068M8m1ILJ3Lg/viewform). In default, you can used my extracted features in `data/i3d_feature`. The features were extracted by I3D model that pre-trained on Kinetice dataset.  
+1. Due to ethical issues, I couldn't public the extracted features as well as the dataset. Please use your own features or request to use SENDv1 through [here](https://docs.google.com/forms/d/e/1FAIpQLSeDOEVB5p_W-MagZbIKQoB3pFCb0JW-NX7Br068M8m1ILJ3Lg/viewform). In default, you can used my extracted features in `data/i3d_feature`. The features were extracted by I3D model that pre-trained on Kinetice dataset.  
   Run with `python train_with_features_tcn.py`（for TCN model） or `python train_with_features_ms_tcn.py` (for MS-TCN model) 
   Then, the trained model parameters will be saved in `model_zoo/your_model_zoo`
 2. Using your own features 
