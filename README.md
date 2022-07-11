@@ -12,8 +12,8 @@ In this project, however, we utilized only the visual features to recognize emot
 
 ## Model
 The model can be decoupled into two parts, the feature extraction model and the classification model. The feature extraction model we adapted in this project is a ResNet with Attention module network, and the classification model is MS-TCN. Feel free to try other combinations if you wish. 
-![Loading Framework](data/framework.png "Framework overview")
-![Loading Framework](data/framework.png "Framework overview")
+![Loading resattention](imgs/resattention.png "Feature extractor structure")
+![Loading mstcn](imgs/mstcn.png "Classification sturcture")
 
 
 
