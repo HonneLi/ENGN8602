@@ -6,25 +6,14 @@ See [requirements.txt](./requirements.txt) for further details.
 
 ## Dataset
 [SENDv1](https://github.com/StanfordSocialNeuroscienceLab/SEND) dataset is a set of rich, multimodal videos of self-paced, unscripted emotional narratives, annotated for emotional valence over time. The complex narratives and naturalistic expressions in this dataset provide a challenging test for contemporary time-series emotion recognition models. 
-<p  align="middle">
-  <img src="./sample/dys.png" width="150" />
-  <img src="./sample/koi.png" width="150" />
-  <img src="./sample/met.png" width="150" />
-  <img src="./sample/par.png" width="150" />
-  <img src="./sample/sup.png" width="150" />
-  <br>
-  Multi-cells images in SIPaKMeD dataset
-</p>
 
 In this project, however, we utilized only the visual features to recognize emotional status.
 
 
 ## Model
-All models are in the folder `models`, which contains the baseline and all other methods used in this paper. 
-- ResNet50 - baseline
-- Residual Attention Network - model 1
-- DenseNet121 - model 2
-- DenseNet121 with Residual Channel Attention - model 3
+The model can be decoupled into two parts, the feature extraction model and the classification model. The feature extraction model we adapted in this project is a ResNet with Attention module network, and the classification model is MS-TCN. Feel free to try other combinations if you wish. 
+![Loading Framework](data/framework.png "Framework overview")
+![Loading Framework](data/framework.png "Framework overview")
 
 
 
